@@ -37,7 +37,7 @@ if(!cookies.isAuth)
 
 }else{
   res.statusCode = 302;
-     res.setHeader('Location', '/resturant');
+     res.setHeader('Location', '/resturants');
   
        res.end();
 
@@ -93,9 +93,9 @@ var cookies = parseCookies(req);
         const password = parsedBody[2].split('=')[1];
      console.log(parsedBody)
          User.findByEmail(email).then(([user]) =>{
-         
            if(user[0])
            {
+             console.log(user[0])
              
                   bcrypt
         .compare(password, user[0].password)
@@ -131,7 +131,8 @@ var cookies = parseCookies(req);
       const user = new User(name,email,hashedPassword);
       return  user.save()
       
-    }).then(([rows, fieldData]) => {
+    })
+    .then(([rows, fieldData]) => {
       console.log(rows,fieldData)
        res.statusCode = 302;
      res.setHeader('set-cookie', cookie.serialize('isAuth', 'true', {
@@ -144,11 +145,11 @@ var cookies = parseCookies(req);
   
            }
          }).catch(err => {
+           console.log(err)
            
-           res.writeHead(404, {'Content-type':'text/plain'});
-         res.write(err);
-        res.end();
-           console.log(err)});
+           
+           });
+         
    
       });
       
