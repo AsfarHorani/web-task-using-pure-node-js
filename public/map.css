@@ -4,6 +4,7 @@
       }
       input[type=submit]{
         background-color: #04AA6D;
+        font-size: 20px;
         color: white;
         padding: 12px 20px;
         margin-top: 20px;
@@ -17,3 +18,16 @@
         margin: 0;
         padding: 0;
       }
+      @media (max-width: 500px) {
+        input[type=submit]{
+            background-color: #04AA6D;
+            font-size: 100px;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+    }
+    
