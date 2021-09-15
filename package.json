@@ -1,0 +1,21 @@
+{
+  "name": "google-map-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie": "^0.4.1",
+    "cookie-session": "^1.4.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "node-static": "^0.7.11"
+  }
+}

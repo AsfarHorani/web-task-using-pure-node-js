@@ -1,0 +1,52 @@
+
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="./login.css">
+    
+</head>
+
+<body>
+ 
+<div class="container">
+  <p> Use your previous password and email if already signed up! Other wise sign up</p>
+  <form method="POST" action="/reg">
+  
+      <label for="fname">Name</label>
+      <input type="email" id="fname" name="name" placeholder="Your name..">
+  
+      <label for="lname">Email</label>
+      <input type="text" id="lname" name="email" placeholder="Your Email.">
+  
+    
+  
+      <label for="subject">Password</label>
+      <input type="password" id="lname" name="password" placeholder="Choose your password..">
+  
+      <div class="center">
+        <h1 id="captchaHeading">Captcha Validator Using HTML, CSS and JavaScript</h1>
+        <div id="captchaBackground">
+        <canvas id="captcha">captcha text</canvas>
+        <input id="textBox" type="text" name="text">
+        <div id="buttons">
+        
+          <button id="submitButton" type="button">submit capcha</button>
+        <button id="refreshButton" type="button">Refresh</button>
+        </div>
+        <span id="output"></span>
+        </div>
+        <button id="fsubmitButton"  type="submit">submit</button>
+        </div>
+
+
+        <script src="./capcha.js"></script>
+ 
+  
+        
+ 
+    </form>
+  </div>
+</body>
+
+</html>
